@@ -1,4 +1,5 @@
-{
+{ This is the V1 verison for initial review.
+
   "id": "https://w3id.org/xapi/gca",
   "context": "https://w3id.org/xapi/profiles/context",
   "type": "Profile",
