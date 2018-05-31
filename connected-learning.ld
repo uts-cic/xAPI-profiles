@@ -132,28 +132,6 @@
       }
     },
     {
-      "id": "http://id.tincanapi.com/verb/replied-to-tweet",
-      "inScheme": "http://registry.tincanapi.com",
-      "type": "Verb",
-      "prefLabel": {
-        "en": "replied to tweet"
-      },
-      "definition": {
-        "en": "This is an extension of the tweeted verb for the specific case of a tweet replying to another. This can be used to track group discussions experience. As with Retweeted we expect to find the original tweet id in the context as well as the person's handle to which the reply is addressed using the tweet extension id.tincanapi.com/extension/tweet"
-      }
-    },
-    {
-      "id": "http://id.tincanapi.com/verb/retweeted",
-      "inScheme": "http://registry.tincanapi.com",
-      "type": "Verb",
-      "prefLabel": {
-        "en": "retweeted"
-      },
-      "definition": {
-        "en": "Used when an agent repeats a tweet written by another user. Usage in a statement is similar to tweeted but we expect to find the URI to the original tweet in the context of the statement, as well as the username of the original author as a context extension. The extension URI used for this should be id.tincanapi.com/extension/tweet."
-      }
-    },
-    {
       "id": "http://id.tincanapi.com/verb/voted-up",
       "inScheme": "http://registry.tincanapi.com",
       "type": "Verb",
@@ -166,17 +144,6 @@
       "exactMatch": [
         "http://curatr3.com/define/verb/voted-up"
       ]
-    },
-    {
-      "id": "http://id.tincanapi.com/verb/tweeted",
-      "inScheme": "http://registry.tincanapi.com",
-      "type": "Verb",
-      "prefLabel": {
-        "en": "tweeted"
-      },
-      "definition": {
-        "en": "Use this verb when an agent tweets on Twitter. It is open for use also for other short messages (microblogging services) based on the URI as the activityId. We expect activityId to be a URI to the tweet."
-      }
     },
     {
       "id": "http://activitystrea.ms/head/activity-schema.html#collection",
@@ -324,42 +291,6 @@
       "definition": {
         "en": "Used to describe the action of posting a discussion topic or message on a forum."
       }
-    },
-    {
-      "id": "http://id.tincanapi.com/verb/replied-to-tweet",
-      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
-      "type": "ResultExtension",
-      "prefLabel": {
-        "en": "retweeted"
-      },
-      "definition": {
-        "en": "This is an extension of the tweeted verb for the specific case of a tweet replying to another.This can be used to track group discussions experience.As with Retweeted we expect to find the original tweet id in the context as well as the persons handle to which the reply is addressed using the tweet extension URI http: id.tincanapi.com/extension /tweet"
-      },
-      "inlineSchema": "{ \"type\": \"number\", \"maximum\": 100, \"minimum\": 0, \"multipleOf\": 1.0 }"
-    },
-    {
-      "id": "https://w3id.org/xapi/cmi5/context/extensions/masteryscore",
-      "inScheme": "https://w3id.org/xapi/cmi5/context/categories/cmi5",
-      "type": "ContextExtension",
-      "prefLabel": {
-        "en": "mastery score"
-      },
-      "definition": {
-        "en": "'masteryScore' as provided in the LMS Launch Data for the AU plus registration used to determine the pass / fail result based on score"
-      },
-      "inlineSchema": "{ \"type\": \"number\",  \"maximum\": 1, \"minimum\": 0 }"
-    },
-    {
-      "id": "https://w3id.org/xapi/cmi5/context/extensions/sessionid",
-      "inScheme": "https://w3id.org/xapi/cmi5/context/categories/cmi5",
-      "type": "ContextExtension",
-      "prefLabel": {
-        "en": "session ID"
-      },
-      "definition": {
-        "en": "A unique identifier for a single social network session based on actor and activity."
-      },
-      "inlineSchema": "{ \"type\": \"string\" }"
     }
   ],
   "templates": [

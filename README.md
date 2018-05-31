@@ -1,4 +1,4 @@
-#The Connected Learning Profile (CL Profile)
+# The Connected Learning Profile (CL Profile)
 
 This profile describes the xAPI (https://github.com/adlnet/xAPI-Spec) verbs, activities, and relationships between users of various social media networks in a format that enables Learning Analytics products to be applied interoperably across all platforms. It is a reimplementation of the Connected Learning Recipe (https://github.com/kirstykitto/CLRecipe) that has been rewritten to meet the new xAPI Profiles Specification (https://github.com/adlnet/xapi-profiles).
 
