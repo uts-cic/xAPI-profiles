@@ -1,29 +1,28 @@
-{ This is the V1 verison for initial review.
-
-  "id": "https://w3id.org/xapi/gca",
+{
+  "id": "https://w3id.org/xapi/connected-learning",
   "context": "https://w3id.org/xapi/profiles/context",
   "type": "Profile",
   "conformsTo": "https://w3id.org/xapi/profiles#1.0",
   "prefLabel": {
-    "en": "GCA Profile"
+    "en": "Connected Learning Profile"
   },
   "definition": {
-    "en": "This specification describes interoperable runtime communication amongst social networks and online learning tools use by Connected Learning Toolkit CLA. The runtime communication and behaviour of all parts of the system are described in full specification at github.com/uts-cic/GCA/gca_spec_current.md"
+    "en": "This profile describes the  verbs, activities, and relationships between users of various social media networks in a format that enables Learning Analytics across an interoperable data format (facilitating reuse of tools). It is currently used by the Connected Learning Analytics (CLA) toolkit. Details of behaviour and mappings across supported social media platforms are provided in github.com/uts-cic/connected-learning/README.md"
   },
   "author": {
     "type": "Organisation",
-    "name": "UTS CIC GCA Working Group"
+    "name": "UTS CIC"
   },
   "versions": [
     {
-      "id": "https://w3id.org/xapi/gca",
-      "generatedAtTime": "2017-12-24T12:00:00"
+      "id": "https://w3id.org/xapi/connected-learning/v1.0.0",
+      "generatedAtTime": "2018-06-01T12:00:00"
     }
   ],
   "concepts": [
     {
-      "@id": "http://activitystrea.ms/schema/1.0/create",
-      "inScheme": "https://github.com/uts-cic/GCA/v1",
+      "@id": "http://activitystrea.ms/schema/1.0.0/create",
+      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
       "@type": "Verb",
       "definition": {
         "en": "Indicates that the actor has created the object."
@@ -45,7 +44,7 @@
     },
     {
       "@id": "https://w3id.org/xapi/acrossx/verbs/liked",
-      "inScheme": "https://github.com/uts-cic/GCA/v1",
+      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
       "@type": "Verb",
       "definition": {
         "en": "Indicates that the actor approves of, recommends, or endorses the object or activity."
@@ -317,7 +316,7 @@
     },
     {
       "id": "https://w3id.org/xapi/acrossx/verbs/posted",
-      "inScheme": "https://github.com/uts-cic/GCA/v1",
+      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
       "type": "ResultExtension",
       "prefLabel": {
         "en": "posted"
@@ -328,7 +327,7 @@
     },
     {
       "id": "http://id.tincanapi.com/verb/replied-to-tweet",
-      "inScheme": "https://github.com/uts-cic/GCA/v1",
+      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
       "type": "ResultExtension",
       "prefLabel": {
         "en": "retweeted"
@@ -365,11 +364,11 @@
   ],
   "templates": [
     {
-      "id": "https://w3id.org/xapi/gca#generalrestrictions",
+      "id": "https://w3id.org/xapi/connected-learning#generalrestrictions",
       "type": "StatementTemplate",
-      "inScheme": "https://w3id.org/xapi/gca/v1",
+      "inScheme": "https://w3id.org/xapi/connected-learning/v1.0.0",
       "prefLabel": {
-        "en": "Restrictions for all GCA-defined Statements"
+        "en": "Restrictions for all connected-learning-defined Statements"
       },
       "rules": [
         {
@@ -391,11 +390,11 @@
       ]
     },
     {
-      "id": "https://w3id.org/xapi/gca#interactionrestrictions",
+      "id": "https://w3id.org/xapi/connected-learning#interactionrestrictions",
       "type": "StatementTemplate",
-      "inScheme": "https://w3id.org/xapi/gca/v1",
+      "inScheme": "https://w3id.org/xapi/connected-learning/v1.0.0",
       "prefLabel": {
-        "en": "Restrictions for all GCA-defined learning activity statements"
+        "en": "Restrictions for all connected-learning-defined learning activity statements"
       },
       "rules": [
         {
@@ -412,15 +411,15 @@
           "scopeNote": "An Activity object with an 'id' property whose value is the unaltered value of the AU's id attribute from the course structure. MUST be included in the 'grouping' context activities."
         },
         {
-          "location": "$.context.extensions['https://w3id.org/xapi/gca/context/extensions/tag']",
+          "location": "$.context.extensions['https://w3id.org/xapi/connected-learning/context/extensions/tag']",
           "presence": "included"
         },
         {
-          "location": "$.context.extensions['https://w3id.org/xapi/gca/context/extensions/parent.message']",
+          "location": "$.context.extensions['https://w3id.org/xapi/connected-learning/context/extensions/parent.message']",
           "presence": "recommended"
         },
         {
-          "location": "$.context.extensions['https://w3id.org/xapi/gca/context/extensions/parent.message.actor']",
+          "location": "$.context.extensions['https://w3id.org/xapi/connected-learning/context/extensions/parent.message.actor']",
           "presence": "recommended"
         },
         {
@@ -434,13 +433,13 @@
       ]
     },
     {
-      "id": "https://w3id.org/xapi/gca#coursenrolmentrestrictions",
+      "id": "https://w3id.org/xapi/connected-learning#coursenrolmentrestrictions",
       "type": "StatementTemplate",
-      "inScheme": "https://w3id.org/xapi/gca/v1",
+      "inScheme": "https://w3id.org/xapi/connected-learning/v1.0.0",
       "prefLabel": {
-        "en": "Restrictions for all GCA learner course enrolments and assigned platform to monitor statements"
+        "en": "Restrictions for all connected-learning learner course enrolments and assigned platform to monitor statements"
       },
-      "zeroOrMore": "https://w3id.org/xapi/gca#platform",
+      "zeroOrMore": "https://w3id.org/xapi/connected-learning#platform",
       "rules": [
         {
           "location": "$.course",
@@ -479,17 +478,17 @@
   ],
   "patterns": [
     {
-      "id": "https://w3id.org/xapi/gca#activityverb",
+      "id": "https://w3id.org/xapi/connected-learning#activityverb",
       "type": "Pattern",
       "prefLabel": {
         "en": "Activity verb on Social networking sites"
       },
-      "inScheme": "https://w3id.org/xapi/gca/v1",
+      "inScheme": "https://w3id.org/xapi/connected-learning/v1.0.0",
       "alternates": [
-        "https://w3id.org/xapi/gca#shared",
-        "https://w3id.org/xapi/gca#liked",
-        "https://w3id.org/xapi/gca#commented",
-        "https://w3id.org/xapi/gca#posted"
+        "https://w3id.org/xapi/connected-learning#shared",
+        "https://w3id.org/xapi/connected-learning#liked",
+        "https://w3id.org/xapi/connected-learning#commented",
+        "https://w3id.org/xapi/connected-learning#posted"
       ]
     },
     {
@@ -501,23 +500,23 @@
       "definition": {
         "en": "This pattern provides an option to use zero or more of Activity verb on Social networking sites."
       },
-      "inScheme": "https://w3id.org/xapi/gca/v1",
-      "zeroOrMore": "https://w3id.org/xapi/gca#activityverb"
+      "inScheme": "https://w3id.org/xapi/connected-learning/v1.0.0",
+      "zeroOrMore": "https://w3id.org/xapi/connected-learning#activityverb"
     },
     {
-      "id": "https://w3id.org/xapi/gca#platform",
+      "id": "https://w3id.org/xapi/connected-learning#platform",
       "type": "Pattern",
       "prefLabel": {
-        "en": "Social Networking Platforms included in GCA"
+        "en": "Social Networking Platforms included in connected-learning"
       },
-      "inScheme": "https://w3id.org/xapi/gca/v1",
+      "inScheme": "https://w3id.org/xapi/connected-learning/v1.0.0",
       "alternates": [
-        "https://w3id.org/xapi/gca#facebook",
-        "https://w3id.org/xapi/gca#twitter",
-        "https://w3id.org/xapi/gca#forum",
-        "https://w3id.org/xapi/gca#youtube",
-        "https://w3id.org/xapi/gca#diigo",
-        "https://w3id.org/xapi/gca#blog"
+        "https://w3id.org/xapi/connected-learning#facebook",
+        "https://w3id.org/xapi/connected-learning#twitter",
+        "https://w3id.org/xapi/connected-learning#forum",
+        "https://w3id.org/xapi/connected-learning#youtube",
+        "https://w3id.org/xapi/connected-learning#diigo",
+        "https://w3id.org/xapi/connected-learning#blog"
       ]
     }
   ]
