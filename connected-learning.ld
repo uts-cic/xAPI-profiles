@@ -20,28 +20,15 @@
     }
   ],
   "concepts": [
-    {
-      "@id": "http://activitystrea.ms/schema/1.0.0/create",
-      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
-      "@type": "Verb",
-      "definition": {
-        "en": "Indicates that the actor has created the object."
-      },
-      "prefLabel": {
-        "en": "created"
-      }
+  {
+    "@id": "http://adlnet.gov/expapi/verbs/created",
+    "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
+    "type": "Verb",
+    "prefLabel": {
+      "en": "created"
     },
-    {
-      "@id": "http://adlnet.gov/expapi/verbs/shared",
-      "inScheme": "https://w3id.org/xapi/adl",
-      "type": "Verb",
-      "prefLabel": {
-        "en": "shared"
-      },
-      "definition": {
-        "en": "Indicates the actor's intent to openly provide access to an object of common interest to other actors or groups."
-      }
-    },
+    "definition": {}
+  },
     {
       "@id": "https://w3id.org/xapi/acrossx/verbs/liked",
       "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
@@ -54,8 +41,39 @@
       }
     },
     {
+      "@id": "http://adlnet.gov/expapi/verbs/shared",
+      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
+      "type": "Verb",
+      "prefLabel": {
+        "en": "shared"
+      },
+      "definition": {
+        "en": "Indicates the actor's intent to openly provide access to an object of common interest to other actors or groups."
+      }
+    },
+    {
+      "@id": "http://activitystrea.ms/schema/1.0/tag"
+      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
+      "type": "Verb",
+      "prefLabel": {
+        "en": "tagged"
+      },
+      "definition": {
+        "en": "Indicates that the actor has associated the object with the target. For example, if the actor specifies that a particular user appears in a photo. the object is the user and the target is the photo."
+      }
+    },
+    {
+      "@id": "http://adlnet.gov/expapi/verbs/rated",
+      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
+      "type": "Verb",
+      "prefLabel": {
+        "en": "rated"
+      },
+      "definition": {}
+    },
+    {
       "@id": "http://adlnet.gov/expapi/verbs/commented",
-      "inScheme": "https://w3id.org/xapi/adl",
+      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
       "type": "Verb",
       "prefLabel": {
         "en": "commented"
@@ -65,17 +83,8 @@
       }
     },
     {
-      "@id": "http://adlnet.gov/expapi/verbs/rated",
-      "inScheme": "https://w3id.org/xapi/adl",
-      "type": "Verb",
-      "prefLabel": {
-        "en": "rated"
-      },
-      "definition": {}
-    },
-    {
       "@id": "http://adlnet.gov/expapi/verbs/added",
-      "inScheme": "https://w3id.org/xapi/adl",
+      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
       "type": "Verb",
       "prefLabel": {
         "en": "added"
@@ -83,17 +92,8 @@
       "definition": {}
     },
     {
-      "@id": "http://adlnet.gov/expapi/verbs/created",
-      "inScheme": "https://w3id.org/xapi/adl",
-      "type": "Verb",
-      "prefLabel": {
-        "en": "created"
-      },
-      "definition": {}
-    },
-    {
       "@id": "http://adlnet.gov/expapi/verbs/linked",
-      "inScheme": "https://w3id.org/xapi/adl",
+      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
       "type": "Verb",
       "prefLabel": {
         "en": "linked"
@@ -102,7 +102,7 @@
     },
     {
       "@id": "http://adlnet.gov/expapi/verbs/deleted",
-      "inScheme": "https://w3id.org/xapi/adl",
+      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
       "type": "Verb",
       "prefLabel": {
         "en": "deleted"
@@ -110,44 +110,8 @@
       "definition": {}
     },
     {
-      "@id": "http://id.tincanapi.com/verb/mentioned",
-      "inScheme": "http://registry.tincanapi.com",
-      "type": "Verb",
-      "prefLabel": {
-        "en": "mentioned"
-      },
-      "definition": {
-        "en": "Indicates that the actor mentioned the object, for example in a tweet."
-      }
-    },
-    {
-      "id": "http://id.tincanapi.com/verb/replied",
-      "inScheme": "http://registry.tincanapi.com",
-      "type": "Verb",
-      "prefLabel": {
-        "en": "replied"
-      },
-      "definition": {
-        "en": "The actor posted a reply to a forum, comment thread or discussion."
-      }
-    },
-    {
-      "id": "http://id.tincanapi.com/verb/voted-up",
-      "inScheme": "http://registry.tincanapi.com",
-      "type": "Verb",
-      "prefLabel": {
-        "en": "voted up"
-      },
-      "definition": {
-        "en": "Indicates that the actor has voted up for a specific object. This is analogous to giving a thumbs up."
-      },
-      "exactMatch": [
-        "http://curatr3.com/define/verb/voted-up"
-      ]
-    },
-    {
       "id": "http://activitystrea.ms/head/activity-schema.html#collection",
-      "inScheme": "http://registry.tincanapi.com",
+      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
       "type": "ActivityType",
       "definition": {},
       "prefLabel": {
@@ -156,7 +120,7 @@
     },
     {
       "id": "http://activitystrea.ms/schema/1.0/article",
-      "inScheme": "http://registry.tincanapi.com",
+      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
       "type": "ActivityType",
       "definition": {},
       "prefLabel": {
@@ -165,7 +129,7 @@
     },
     {
       "id": "http://activitystrea.ms/schema/1.0/note",
-      "inScheme": "http://registry.tincanapi.com",
+      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
       "type": "ActivityType",
       "definition": {},
       "prefLabel": {
@@ -174,7 +138,7 @@
     },
     {
       "id": "http://activitystrea.ms/schema/1.0/audio",
-      "inScheme": "http://registry.tincanapi.com",
+      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
       "type": "ActivityType",
       "definition": {},
       "prefLabel": {
@@ -183,7 +147,7 @@
     },
     {
       "id": "http://activitystrea.ms/schema/1.0/file",
-      "inScheme": "http://registry.tincanapi.com",
+      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
       "type": "ActivityType",
       "definition": {},
       "prefLabel": {
@@ -192,7 +156,7 @@
     },
     {
       "id": "http://activitystrea.ms/schema/1.0/image",
-      "inScheme": "http://registry.tincanapi.com",
+      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
       "type": "ActivityType",
       "definition": {},
       "prefLabel": {
@@ -201,7 +165,7 @@
     },
     {
       "id": "http://activitystrea.ms/schema/1.0/video",
-      "inScheme": "http://registry.tincanapi.com",
+      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
       "type": "ActivityType",
       "definition": {},
       "prefLabel": {
@@ -210,7 +174,7 @@
     },
     {
       "id": "http://activitystrea.ms/schema/1.0/link",
-      "inScheme": "http://registry.tincanapi.com",
+      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
       "type": "ActivityType",
       "definition": {},
       "prefLabel": {
@@ -219,7 +183,7 @@
     },
     {
       "id": "http://activitystrea.ms/schema/1.0/bookmark",
-      "inScheme": "http://registry.tincanapi.com",
+      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
       "type": "ActivityType",
       "definition": {},
       "prefLabel": {
@@ -228,7 +192,7 @@
     },
     {
       "id": "http://id.tincanapi.com/activitytype/tag",
-      "inScheme": "http://registry.tincanapi.com",
+      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
       "type": "ActivityType",
       "definition": {
         "en": "Activity generally used in the other or grouping Context Activities lists to mark a statement as being related to a particular subject area. Implemented as a one word identifier used for search filtering or tag cloud generation."
@@ -238,58 +202,14 @@
       }
     },
     {
-      "id": "http://id.tincanapi.com/activitytype/blog",
-      "inScheme": "http://registry.tincanapi.com",
-      "type": "ActivityType",
-      "definition": {
-        "en": "A regularly updated website or web page, typically one authored by an individual or small group, that is written in an informal or conversational style."
-      },
-      "prefLabel": {
-        "en": "blog"
-      }
-    },
-    {
       "@id": "https://w3id.org/xapi/cmi5/activities/course",
-      "inScheme": "https://w3id.org/xapi/cmi5/context/categories/cmi5",
+      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
       "@type": "ActivityType",
       "definition": {
         "en": "A course represents an amount of content that is published and registered for with the purpose of gaining completion. It is represented with a Course Structure Format in cmi5 as the highest level of content (above Block and AU)."
       },
       "prefLabel": {
         "en": "course"
-      }
-    },
-    {
-      "id": "http://id.tincanapi.com/activitytype/tweet",
-      "inScheme": "http://registry.tincanapi.com",
-      "type": "ActivityType",
-      "definition": {
-        "en": "A short message sent on Twitter. Used with the 'tweeted' verb."
-      },
-      "prefLabel": {
-        "en": "tweet"
-      }
-    },
-    {
-      "id": "http://id.tincanapi.com/activitytype/forum-reply",
-      "inScheme": "http://registry.tincanapi.com",
-      "type": "ActivityType",
-      "definition": {
-        "en": "Any post in a forum or discussion board thread that isn't the first."
-      },
-      "prefLabel": {
-        "en": "forum reply"
-      }
-    },
-    {
-      "id": "https://w3id.org/xapi/acrossx/verbs/posted",
-      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
-      "type": "ResultExtension",
-      "prefLabel": {
-        "en": "posted"
-      },
-      "definition": {
-        "en": "Used to describe the action of posting a discussion topic or message on a forum."
       }
     }
   ],

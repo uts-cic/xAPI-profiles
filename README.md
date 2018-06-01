@@ -58,23 +58,24 @@ The table below show how social media activities from different social media pla
 
 ### Verbs
 
-Verbs are actions that are performed on an object. Most of the verbs used in the CL Profile are from the [Activity Stream API](http://activitystrea.ms/head/activity-schema.html#verbs)
+Verbs are actions that are performed on an object. Most of the verbs used in the CL Profile are taken from http://xapi.vocab.pub/ , although Activity Stream verbs are included here to assist with semantic matching to them - referred to as (AS: http://activitystrea.ms/head/activity-schema.html#verbs)
 
 | Verb  | Description | Source |
 | ------------- | ------------- | ------------- |
-| Create  | Indicates that the actor has created the object.  | [Activity Stream Schema](http://activitystrea.ms/schema/1.0/create) |
-| Like  |  Indicates that the actor marked the object as an item of special interest. The "like" verb is considered to be an alias of "favorite". The two verb are semantically identical. | [Activity Stream Schema](http://activitystrea.ms/schema/1.0/like) |
-| Share  | Indicates that the actor has called out the object to readers. In most cases, the actor did not create the object being shared, but is instead drawing attention to it.  | [Activity Stream Schema](http://activitystrea.ms/schema/1.0/share) |
-| Tag  | Activity generally used in the "other" or "grouping" Context Activities lists to mark a statement as being related to a particular subject area. Implemented as a one word identifier used for search filtering or tag cloud generation. Includes hashtagging for tweets. | [TINCAN API](http://activitystrea.ms/schema/1.0/tag) |
-| Rate  | Action of giving a rating to an object. In general the rating should be included in the Result with a Score object. There is an extension to include the 'raw' value as well as 'min' and 'max' range indicators. | [TINCAN API](http://id.tincanapi.com/verb/rated) & [TINCAN Quality Rating Extension](http://id.tincanapi.com/extension/quality-rating) |
-| Add  | Indicates that the actor has added the object to the target. For instance, adding a photo to an album.  | [Activity Stream Schema](http://activitystrea.ms/schema/1.0/add) |
+| Created  | Indicates that the actor has created the object.  | In http://xapi.vocab.pub/ as http://adlnet.gov/expapi/verbs/created (AS: http://activitystrea.ms/schema/1.0/create) |
+| Liked |  Indicates that the actor marked the object as an item of special interest. The "like" verb is considered to be an alias of "favorite". The two verb are semantically identical. | In http://xapi.vocab.pub/  as https://w3id.org/xapi/acrossx/verbs/liked (AS: http://activitystrea.ms/schema/1.0/like) |
+| Shared  | Indicates that the actor has called out an object to readers. In most cases, the actor is drawing attention to an existing object rather than creating a new one.  | In https://w3id.org/xapi/adl as http://adlnet.gov/expapi/verbs/shared (AS: http://activitystrea.ms/schema/1.0/share) |
+| Tagged  | Activity generally used in the "other" or "grouping" Context Activities lists to mark a statement as being related to a particular subject area. Implemented as a one word identifier used for search filtering or tag cloud generation. Includes hashtagging for tweets. | AS: http://activitystrea.ms/schema/1.0/tag |
+| Rated  | Action of giving a rating to an object. In general the rating should be included in the Result with a Score object. There is an extension to include the 'raw' value as well as 'min' and 'max' range indicators. | In https://w3id.org/xapi/adl as http://adlnet.gov/expapi/verbs/rated |
+| Commented | Indicates the actor provided digital or written annotations on or about an object. | In https://w3id.org/xapi/adl as http://adlnet.gov/expapi/verbs/commented|
+| Added  | AS: Indicates that the actor has added the object to the target. For instance, adding a photo to an album.  | In https://w3id.org/xapi/adl as http://adlnet.gov/expapi/verbs/added (AS: http://activitystrea.ms/schema/1.0/add) |
 
 The table below show how actions from different social media platforms map to the Verbs chosen for use in the CL Profile.
 
-|   | Create | Like | Share | Tag | Rate | Comment | Add |
+|   | Created | Liked | Shared | Tagged | Rated | Commented | Added |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | Facebook | Post | Like | Share | Tag | - | Reply | - |
 | Google+ | Post | Like | Share | Tag | - | Reply | - |
-| Twitter | Tweet | Favorite | Retweet | Hashtag | - | - |
-| Blog | Post | - | - | Tag | Rate | Comment | - |
+| Twitter | Tweet | Favorite | Retweet | Hashtag(#)/Mention(@) | - | - |
+| Blog | Post | - | - | Tag  | Rate | Comment | - |
 | Pinterest | Board | Like | Share | - | - | - | Pin |
