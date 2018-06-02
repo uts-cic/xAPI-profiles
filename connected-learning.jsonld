@@ -210,17 +210,6 @@
       }
     },
     {
-      "id": "http://id.tincanapi.com/activitytype/tag",
-      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
-      "type": "ActivityType",
-      "definition": {
-        "en": "Activity generally used in the other or grouping Context Activities lists to mark a statement as being related to a particular subject area. Implemented as a one word identifier used for search filtering or tag cloud generation."
-      },
-      "prefLabel": {
-        "en": "tag"
-      }
-    },
-    {
       "@id": "https://w3id.org/xapi/cmi5/activities/course",
       "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
       "@type": "ActivityType",

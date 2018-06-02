@@ -39,7 +39,7 @@ Activities describe objects that are created on social media platforms. Blog pos
 | Article | Represents objects such as news articles, knowledge base entries, or other similar construct. Such objects generally consist of paragraphs of text, in some cases incorporating embedded media such as photos and inline hyperlinks to other resources.  | http://activitystrea.ms/schema/1.0/article |
 | Comment | Represents a textual response to another object. In this profile, objects of this type MUST contain an additional inReplyTo property whose value is an Array of one or more other Activity Stream Objects for which the object is to be considered a response (AS only uses MAY). | https://github.com/uts-cic/connected-learning/v1.0.0/comment Broad: http://activitystrea.ms/comment |
 | Collection | Represents a collection of items being used in a connected learning experience. For instance a pinterest board.  | https://github.com/uts-cic/connected-learning/v1.0.0/collection Broad: http://activitystrea.ms/collection |
-|       |  I DONT THINK WE ARE USING ANY OF THESE... CAN PROBABLY DELETE?    |     |
+|       |  I DONT THINK WE ARE USING ANY OF THESE... CAN PROBABLY DELETE? MAY NEED IN CCA Profile though...    |     |
 | Audio | Represents audio content of any kind.  | [Activity Stream Schema](http://activitystrea.ms/schema/1.0/audio) |
 | File | Represents any form of document or file. | [Activity Stream Schema](http://activitystrea.ms/schema/1.0/file) |
 | Image | Represents a graphical image.  | [Activity Stream Schema](http://activitystrea.ms/schema/1.0/image) |
