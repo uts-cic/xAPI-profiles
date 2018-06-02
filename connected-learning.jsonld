@@ -27,14 +27,14 @@
     "prefLabel": {
       "en": "created"
     },
-    "definition": {}
+    "definition": "Indicates that the actor has created the object."
   },
     {
-      "@id": "https://w3id.org/xapi/acrossx/verbs/liked",
+      "@id": "http://adlnet.gov/expapi/verbs/liked",
       "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
       "@type": "Verb",
       "definition": {
-        "en": "Indicates that the actor approves of, recommends, or endorses the object or activity."
+        "en": "Indicates that the actor marked the object as an item of special interest. The like verb is considered to be an alias of favorite. The two verb are semantically identical."
       },
       "prefLabel": {
         "en": "liked"
@@ -48,18 +48,18 @@
         "en": "shared"
       },
       "definition": {
-        "en": "Indicates the actor's intent to openly provide access to an object of common interest to other actors or groups."
+        "en": "Indicates that the actor has called out an object to readers. Note that the actor is drawing attention to an existing object rather than creating a new one."
       }
     },
     {
-      "@id": "http://activitystrea.ms/schema/1.0/tag"
+      "@id": "http://adlnet.gov/expapi/verbs/tagged"
       "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
       "type": "Verb",
       "prefLabel": {
         "en": "tagged"
       },
       "definition": {
-        "en": "Indicates that the actor has associated the object with the target. For example, if the actor specifies that a particular user appears in a photo. the object is the user and the target is the photo."
+        "en": "Marks an object as being related to a particular subject area. Implemented as a one word identifier used for search filtering or tag cloud generation. Includes hashtagging and mentions for tweets."
       }
     },
     {
@@ -69,7 +69,9 @@
       "prefLabel": {
         "en": "rated"
       },
-      "definition": {}
+      "definition": {
+        "en": "Action of giving a rating to an object. In general the rating should be included in the Result with a Score object. There is an extension to include the 'raw' value as well as 'min' and 'max' range indicators."
+      }
     },
     {
       "@id": "http://adlnet.gov/expapi/verbs/commented",
@@ -89,16 +91,9 @@
       "prefLabel": {
         "en": "added"
       },
-      "definition": {}
-    },
-    {
-      "@id": "http://adlnet.gov/expapi/verbs/linked",
-      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
-      "type": "Verb",
-      "prefLabel": {
-        "en": "linked"
-      },
-      "definition": {}
+      "definition": {
+        "en": "Indicates that the actor has added the object to the target. For instance, adding a photo to an album."
+      }
     },
     {
       "@id": "http://adlnet.gov/expapi/verbs/deleted",
@@ -107,16 +102,18 @@
       "prefLabel": {
         "en": "deleted"
       },
-      "definition": {}
+      "definition": {
+        "en": "Indicates that the actor has deleted an object. For instance, deleting a tweet or facebook post."
+      }
     },
     {
-      "id": "http://activitystrea.ms/head/activity-schema.html#collection",
+      "id": "http://activitystrea.ms/collection",
       "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
       "type": "ActivityType",
-      "definition": {},
       "prefLabel": {
         "en": "collection"
-      }
+      },
+      "definition": {}
     },
     {
       "id": "http://activitystrea.ms/schema/1.0/article",

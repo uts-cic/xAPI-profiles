@@ -63,19 +63,20 @@ Verbs are actions that are performed on an object. Most of the verbs used in the
 | Verb  | Description | Source |
 | ------------- | ------------- | ------------- |
 | Created  | Indicates that the actor has created the object.  | In http://xapi.vocab.pub/ as http://adlnet.gov/expapi/verbs/created (AS: http://activitystrea.ms/schema/1.0/create) |
-| Liked |  Indicates that the actor marked the object as an item of special interest. The "like" verb is considered to be an alias of "favorite". The two verb are semantically identical. | In http://xapi.vocab.pub/  as https://w3id.org/xapi/acrossx/verbs/liked (AS: http://activitystrea.ms/schema/1.0/like) |
-| Shared  | Indicates that the actor has called out an object to readers. In most cases, the actor is drawing attention to an existing object rather than creating a new one.  | In https://w3id.org/xapi/adl as http://adlnet.gov/expapi/verbs/shared (AS: http://activitystrea.ms/schema/1.0/share) |
-| Tagged  | Activity generally used in the "other" or "grouping" Context Activities lists to mark a statement as being related to a particular subject area. Implemented as a one word identifier used for search filtering or tag cloud generation. Includes hashtagging for tweets. | AS: http://activitystrea.ms/schema/1.0/tag |
+| Liked |  Indicates that the actor marked the object as an item of special interest. The "like" verb is considered to be an alias of "favorite". The two verb are semantically identical. | In http://xapi.vocab.pub/  as http://adlnet.gov/expapi/verbs/liked (AS: http://activitystrea.ms/schema/1.0/like) |
+| Shared  | Indicates that the actor has called out an object to readers. Note that the actor is drawing attention to an existing object rather than creating a new one.  | In https://w3id.org/xapi/adl as http://adlnet.gov/expapi/verbs/shared (AS: http://activitystrea.ms/schema/1.0/share) |
+| Tagged  | Marks an object as being related to a particular subject area. Implemented as a one word identifier used for search filtering or tag cloud generation. Includes hashtagging and mentions for tweets. | In https://w3id.org/xapi/adl as http://adlnet.gov/expapi/verbs/tagged (AS: http://activitystrea.ms/schema/1.0/tag) |
 | Rated  | Action of giving a rating to an object. In general the rating should be included in the Result with a Score object. There is an extension to include the 'raw' value as well as 'min' and 'max' range indicators. | In https://w3id.org/xapi/adl as http://adlnet.gov/expapi/verbs/rated |
-| Commented | Indicates the actor provided digital or written annotations on or about an object. | In https://w3id.org/xapi/adl as http://adlnet.gov/expapi/verbs/commented|
-| Added  | AS: Indicates that the actor has added the object to the target. For instance, adding a photo to an album.  | In https://w3id.org/xapi/adl as http://adlnet.gov/expapi/verbs/added (AS: http://activitystrea.ms/schema/1.0/add) |
+| Commented | Indicates the actor provided digital or written annotations on or about an object. | In https://w3id.org/xapi/adl as http://adlnet.gov/expapi/verbs/commented |
+| Added  | Indicates that the actor has added the object to the target. For instance, adding a photo to an album.  | In https://w3id.org/xapi/adl as http://adlnet.gov/expapi/verbs/added (AS: http://activitystrea.ms/schema/1.0/add) |
+| Deleted  | Indicates that the actor has deleted an object. For instance, deleting a tweet or facebook post.  | In https://w3id.org/xapi/adl as http://adlnet.gov/expapi/verbs/deleted (AS: http://activitystrea.ms/schema/1.0/add) |
 
 The table below show how actions from different social media platforms map to the Verbs chosen for use in the CL Profile.
 
-|   | Created | Liked | Shared | Tagged | Rated | Commented | Added |
-| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Facebook | Post | Like | Share | Tag | - | Reply | - |
-| Google+ | Post | Like | Share | Tag | - | Reply | - |
-| Twitter | Tweet | Favorite | Retweet | Hashtag(#)/Mention(@) | - | - |
-| Blog | Post | - | - | Tag  | Rate | Comment | - |
-| Pinterest | Board | Like | Share | - | - | - | Pin |
+|   | Created | Liked | Shared | Tagged | Rated | Commented | Added | Deleted |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| Facebook | Post | Like | Share | Tag | - | Reply | - | Delete |
+| Google+ | Post | Like | Share | Tag | - | Reply | - | Delete |
+| Twitter | Tweet | Favorite | Retweet | Hashtag(#)/Mention(@) | - | - | Delete |
+| Blog | Post | - | - | Tag  | Rate | Comment | - | Delete |
+| Pinterest | Board | Like | Share | - | - | - | Pin | Delete |
