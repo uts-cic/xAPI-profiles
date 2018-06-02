@@ -78,5 +78,6 @@ The table below show how actions from different social media platforms map to th
 | Facebook | Post | Like | Share | Tag | - | Reply | - | Delete |
 | Google+ | Post | Like | Share | Tag | - | Reply | - | Delete |
 | Twitter | Tweet | Favorite | Retweet | Hashtag(#)/Mention(@) | - | - | Delete |
+| Slack   | Post  | Star  | Share | Mention | - | Reply | Pin | Delete |
 | Blog | Post | - | - | Tag  | Rate | Comment | - | Delete |
 | Pinterest | Board | Like | Share | - | - | - | Pin | Delete |
