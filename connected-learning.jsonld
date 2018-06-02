@@ -107,31 +107,53 @@
       }
     },
     {
-      "id": "http://activitystrea.ms/collection",
+      "id": "http://activitystrea.ms/note",
       "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
+      "related": [ "http://activitystrea.ms/article" ],
+      "exactMatch": [ "https://w3id.org/xapi/acrossx/activities/note" ],
       "type": "ActivityType",
-      "prefLabel": {
-        "en": "collection"
+      "definition": {
+        "en":"Represents a short-form text message. This object is intended primarily for use in micro-blogging scenarios and in systems where users are invited to publish short, often plain-text messages."
       },
-      "definition": {}
+      "prefLabel": {
+        "en": "note"
+      }
     },
     {
       "id": "http://activitystrea.ms/schema/1.0/article",
       "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
+      "related": [ "http://activitystrea.ms/note" ],
       "type": "ActivityType",
-      "definition": {},
+      "definition": {
+        "en": "Represents objects such as blogs, knowledge base entries, or other similar construct. Such objects generally consist of paragraphs of text, in some cases incorporating embedded media such as photos and inline hyperlinks to other resources."
+      },
       "prefLabel": {
         "en": "article"
       }
     },
     {
-      "id": "http://activitystrea.ms/schema/1.0/note",
+      "id": "https://github.com/uts-cic/connected-learning/v1.0.0/comment",
       "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
       "type": "ActivityType",
-      "definition": {},
+      "definition": {
+        "en": "Represents a textual response to another object. In this profile, objects of this type MUST contain an additional inReplyTo property whose value is an Array of one or more other Activity Stream Objects for which the object is to be considered a response (AS only uses MAY). This is to facilitate Social Network Analysis. "
+      },
       "prefLabel": {
-        "en": "note"
-      }
+        "en": "comment"
+      },
+    "broadMatch": ["http://activitystrea.ms/comment"]
+    },
+    {
+      "id": "https://github.com/uts-cic/connected-learning/v1.0.0/collection",
+      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
+      "type": "ActivityType",
+      "prefLabel": {
+        "en": "collection"
+      },
+      "definition": {
+        "en": "Represents a collection of items being used in a connected learning experience. For instance a pinterest board."
+      },
+    "broadMatch": ["http://activitystrea.ms/collection"]
     },
     {
       "id": "http://activitystrea.ms/schema/1.0/audio",

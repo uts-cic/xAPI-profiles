@@ -31,14 +31,15 @@ Option additions to the recipe to facilitate reporting by course and instructor 
 
 ### Activities
 
-Activities are items that are created on social media platforms. Blog posts, tweets, homepage posts and curated media are all example objects. The CL Profile makes a distinction between short Microblogging posts (i.e. using the Note object) and larger text articles (i.e. using the Article object).
+Activities describe objects that are created on social media platforms. Blog posts, tweets, homepage posts and curated media are all example objects. The CL Profile makes a distinction between short Microblogging posts (i.e. using the Note object) and larger text articles (i.e. using the Article object).
 
 | Activity  | Description | Source |
 | ------------- | ------------- | ------------- |
-| Note  | Represents a short-form text message. This object is intended primarily for use in "micro-blogging" scenarios and in systems where users are invited to publish short, often plain-text messages.  | [Activity Stream Schema](http://activitystrea.ms/head/activity-schema.html#note) |
-| Article | Represents objects such as news articles, knowledge base entries, or other similar construct. Such objects generally consist of paragraphs of text, in some cases incorporating embedded media such as photos and inline hyperlinks to other resources.  | [Activity Stream Schema](http://activitystrea.ms/head/activity-schema.html#article) |
-| Comment | Represents a textual response to another object. Objects of this type MAY contain an additional inReplyTo property whose value is an Array of one or more other Activity Stream Objects for which the object is to be considered a response. | [Activity Stream Schema](http://activitystrea.ms/head/activity-schema.html#comment) |
-| Collection | Represents a generic collection of objects of any type.  | [Activity Stream Schema](http://activitystrea.ms/head/activity-schema.html#collection) |
+| Note  | Represents a short-form text message. This object is intended primarily for use in "micro-blogging" scenarios and in systems where users are invited to publish short, often plain-text messages.  | http://activitystrea.ms/note |
+| Article | Represents objects such as news articles, knowledge base entries, or other similar construct. Such objects generally consist of paragraphs of text, in some cases incorporating embedded media such as photos and inline hyperlinks to other resources.  | http://activitystrea.ms/schema/1.0/article |
+| Comment | Represents a textual response to another object. In this profile, objects of this type MUST contain an additional inReplyTo property whose value is an Array of one or more other Activity Stream Objects for which the object is to be considered a response (AS only uses MAY). | https://github.com/uts-cic/connected-learning/v1.0.0/comment Broad: http://activitystrea.ms/comment |
+| Collection | Represents a collection of items being used in a connected learning experience. For instance a pinterest board.  | https://github.com/uts-cic/connected-learning/v1.0.0/collection Broad: http://activitystrea.ms/collection |
+|       |  I DONT THINK WE ARE USING ANY OF THESE... CAN PROBABLY DELETE?    |     |
 | Audio | Represents audio content of any kind.  | [Activity Stream Schema](http://activitystrea.ms/schema/1.0/audio) |
 | File | Represents any form of document or file. | [Activity Stream Schema](http://activitystrea.ms/schema/1.0/file) |
 | Image | Represents a graphical image.  | [Activity Stream Schema](http://activitystrea.ms/schema/1.0/image) |
@@ -51,9 +52,11 @@ The table below show how social media activities from different social media pla
 
 | Platforms  | Note | Article | Comment | Collection |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Twitter - Tweet | Yes |  |  |  |
-| Facebook -  | Yes (Post) | Yes (Page)  |  | |
-| Blog Post | | Yes  | Yes | |
+| Twitter  | Yes |  | Yes |  |
+| Slack | Yes |  | Yes |  |
+| Facebook  | Yes (Post) | Yes (Page)  |  | |
+| Google+  | Yes |   |  | |
+| Blog | | Yes  | Yes | |
 | Pinterest | |  | Yes | Yes |
 
 ### Verbs
@@ -75,9 +78,9 @@ The table below show how actions from different social media platforms map to th
 
 |   | Created | Liked | Shared | Tagged | Rated | Commented | Added | Deleted |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Facebook | Post | Like | Share | Tag | - | Reply | - | Delete |
-| Google+ | Post | Like | Share | Tag | - | Reply | - | Delete |
 | Twitter | Tweet | Favorite | Retweet | Hashtag(#)/Mention(@) | - | - | Delete |
 | Slack   | Post  | Star  | Share | Mention | - | Reply | Pin | Delete |
+| Facebook | Post | Like | Share | Tag | - | Reply | - | Delete |
+| Google+ | Post | Like | Share | Tag | - | Reply | - | Delete |
 | Blog | Post | - | - | Tag  | Rate | Comment | - | Delete |
 | Pinterest | Board | Like | Share | - | - | - | Pin | Delete |
