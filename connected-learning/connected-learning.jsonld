@@ -11,49 +11,20 @@
   },
   "author": {
     "type": "Organisation",
-    "name": "UTS CIC"
+    "name": "University of Technology Sydney's Connected Intelligence Centre"
   },
   "versions": [
     {
-      "id": "https://w3id.org/xapi/connected-learning/v1.0.0",
-      "generatedAtTime": "2018-06-01T12:00:00"
+      "id": "https://w3id.org/xapi/connected-learning/v1.0",
+      "generatedAtTime": "2018-07-02T12:00:00",
+      "wasRevisionOf": ["https://w3id.org/xapi/connected-learning"]
     }
   ],
   "concepts": [
-  {
-    "@id": "http://adlnet.gov/expapi/verbs/created",
-    "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
-    "type": "Verb",
-    "prefLabel": {
-      "en": "created"
-    },
-    "definition": "Indicates that the actor has created the object."
-  },
+
     {
-      "@id": "http://adlnet.gov/expapi/verbs/liked",
-      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
-      "@type": "Verb",
-      "definition": {
-        "en": "Indicates that the actor marked the object as an item of special interest. The like verb is considered to be an alias of favorite. The two verb are semantically identical."
-      },
-      "prefLabel": {
-        "en": "liked"
-      }
-    },
-    {
-      "@id": "http://adlnet.gov/expapi/verbs/shared",
-      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
-      "type": "Verb",
-      "prefLabel": {
-        "en": "shared"
-      },
-      "definition": {
-        "en": "Indicates that the actor has called out an object to readers. Note that the actor is drawing attention to an existing object rather than creating a new one."
-      }
-    },
-    {
-      "@id": "http://adlnet.gov/expapi/verbs/tagged"
-      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
+      "@id": "https://w3id.org/xapi/connected-learning/verbs/tagged",
+      "inScheme": "https://w3id.org/xapi/connected-learning/v1.0",
       "type": "Verb",
       "prefLabel": {
         "en": "tagged"
@@ -63,54 +34,8 @@
       }
     },
     {
-      "@id": "http://adlnet.gov/expapi/verbs/rated",
-      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
-      "type": "Verb",
-      "prefLabel": {
-        "en": "rated"
-      },
-      "definition": {
-        "en": "Action of giving a rating to an object. In general the rating should be included in the Result with a Score object. There is an extension to include the 'raw' value as well as 'min' and 'max' range indicators."
-      }
-    },
-    {
-      "@id": "http://adlnet.gov/expapi/verbs/commented",
-      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
-      "type": "Verb",
-      "prefLabel": {
-        "en": "commented"
-      },
-      "definition": {
-        "en": "Indicates the actor provided digital or written annotations on or about an object."
-      }
-    },
-    {
-      "@id": "http://adlnet.gov/expapi/verbs/added",
-      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
-      "type": "Verb",
-      "prefLabel": {
-        "en": "added"
-      },
-      "definition": {
-        "en": "Indicates that the actor has added the object to the target. For instance, adding a photo to an album."
-      }
-    },
-    {
-      "@id": "http://adlnet.gov/expapi/verbs/deleted",
-      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
-      "type": "Verb",
-      "prefLabel": {
-        "en": "deleted"
-      },
-      "definition": {
-        "en": "Indicates that the actor has deleted an object. For instance, deleting a tweet or facebook post."
-      }
-    },
-    {
-      "id": "http://activitystrea.ms/note",
-      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
-      "related": [ "http://activitystrea.ms/article" ],
-      "exactMatch": [ "https://w3id.org/xapi/acrossx/activities/note" ],
+      "id": "https://w3id.org/xapi/connected-learning/activity-types/note",
+      "inScheme": "https://w3id.org/xapi/connected-learning/v1.0",
       "type": "ActivityType",
       "definition": {
         "en":"Represents a short-form text message. This object is intended primarily for use in micro-blogging scenarios and in systems where users are invited to publish short, often plain-text messages."
@@ -120,9 +45,9 @@
       }
     },
     {
-      "id": "http://activitystrea.ms/schema/1.0/article",
-      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
-      "related": [ "http://activitystrea.ms/note" ],
+      "id": "https://w3id.org/xapi/connected-learning/activity-types/article",
+      "inScheme": "https://w3id.org/xapi/connected-learning/v1.0",
+      "related": [ "https://w3id.org/xapi/connected-learning/activity-types/note" ],
       "type": "ActivityType",
       "definition": {
         "en": "Represents objects such as blogs, knowledge base entries, or other similar construct. Such objects generally consist of paragraphs of text, in some cases incorporating embedded media such as photos and inline hyperlinks to other resources."
@@ -132,8 +57,8 @@
       }
     },
     {
-      "id": "https://github.com/uts-cic/connected-learning/v1.0.0/comment",
-      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
+      "id": "https://w3id.org/xapi/connected-learning/activity-types/comment",
+      "inScheme": "https://w3id.org/xapi/connected-learning/v1.0",
       "type": "ActivityType",
       "definition": {
         "en": "Represents a textual response to another object. In this profile, objects of this type MUST contain an additional inReplyTo property whose value is an Array of one or more other Activity Stream Objects for which the object is to be considered a response (AS only uses MAY). This is to facilitate Social Network Analysis. "
@@ -141,11 +66,11 @@
       "prefLabel": {
         "en": "comment"
       },
-    "broadMatch": ["http://activitystrea.ms/comment"]
+      "broadMatch": [ "http://activitystrea.ms/comment" ]
     },
     {
-      "id": "https://github.com/uts-cic/connected-learning/v1.0.0/collection",
-      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
+      "id": "https://w3id.org/xapi/connected-learning/activity-types/collection",
+      "inScheme": "https://w3id.org/xapi/connected-learning/v1.0",
       "type": "ActivityType",
       "prefLabel": {
         "en": "collection"
@@ -153,113 +78,69 @@
       "definition": {
         "en": "Represents a collection of items being used in a connected learning experience. For instance a pinterest board."
       },
-    "broadMatch": ["http://activitystrea.ms/collection"]
+      "broadMatch": ["http://activitystrea.ms/collection"]
     },
     {
-      "id": "http://activitystrea.ms/schema/1.0/audio",
-      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
-      "type": "ActivityType",
-      "definition": {},
+      "id": "https://w3id.org/xapi/connected-learning/extensions/tag",
+      "inScheme": "https://w3id.org/xapi/connected-learning/v1.0",
+      "type": "ContextExtension",
       "prefLabel": {
-        "en": "Audio"
-      }
-    },
-    {
-      "id": "http://activitystrea.ms/schema/1.0/file",
-      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
-      "type": "ActivityType",
-      "definition": {},
-      "prefLabel": {
-        "en": "File"
-      }
-    },
-    {
-      "id": "http://activitystrea.ms/schema/1.0/image",
-      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
-      "type": "ActivityType",
-      "definition": {},
-      "prefLabel": {
-        "en": "Image"
-      }
-    },
-    {
-      "id": "http://activitystrea.ms/schema/1.0/video",
-      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
-      "type": "ActivityType",
-      "definition": {},
-      "prefLabel": {
-        "en": "Video"
-      }
-    },
-    {
-      "id": "http://activitystrea.ms/schema/1.0/link",
-      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
-      "type": "ActivityType",
-      "definition": {},
-      "prefLabel": {
-        "en": "Link"
-      }
-    },
-    {
-      "id": "http://activitystrea.ms/schema/1.0/bookmark",
-      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
-      "type": "ActivityType",
-      "definition": {},
-      "prefLabel": {
-        "en": "Bookmark"
-      }
-    },
-    {
-      "@id": "https://w3id.org/xapi/cmi5/activities/course",
-      "inScheme": "https://github.com/uts-cic/connected-learning/v1.0.0",
-      "@type": "ActivityType",
-      "definition": {
-        "en": "A course represents an amount of content that is published and registered for with the purpose of gaining completion. It is represented with a Course Structure Format in cmi5 as the highest level of content (above Block and AU)."
+        "en": "tag"
       },
+      "definition": {
+        "en": "Need definition here."
+      }
+    },
+    {
+      "id": "https://w3id.org/xapi/connected-learning/extensions/parent-message",
+      "inScheme": "https://w3id.org/xapi/connected-learning/v1.0",
+      "type": "ContextExtension",
       "prefLabel": {
-        "en": "course"
+        "en": "parent-message"
+      },
+      "definition": {
+        "en": "Need definition here."
+      }
+    },
+    {
+      "id": "https://w3id.org/xapi/connected-learning/extensions/parent-message-actor",
+      "inScheme": "https://w3id.org/xapi/connected-learning/v1.0",
+      "type": "ContextExtension",
+      "prefLabel": {
+        "en": "parent-message-actor"
+      },
+      "definition": {
+        "en": "Need definition here."
       }
     }
   ],
   "templates": [
     {
-      "id": "https://w3id.org/xapi/connected-learning#generalrestrictions",
+      "id": "https://w3id.org/xapi/connected-learning/templates#generalrestrictions",
       "type": "StatementTemplate",
-      "inScheme": "https://w3id.org/xapi/connected-learning/v1.0.0",
+      "inScheme": "https://w3id.org/xapi/connected-learning/v1.0",
       "prefLabel": {
         "en": "Restrictions for all connected-learning-defined Statements"
       },
       "rules": [
         {
-          "location": "$.message.id",
-          "presence": "included"
-        },
-        {
-          "location": "$.date",
+          "location": "$.id",
           "presence": "included"
         },
         {
           "location": "$.timestamp",
           "presence": "included"
-        },
-        {
-          "location": "$.actor",
-          "presence": "included"
         }
       ]
     },
     {
-      "id": "https://w3id.org/xapi/connected-learning#interactionrestrictions",
+      "id": "https://w3id.org/xapi/connected-learning/templates#interactionrestrictions",
       "type": "StatementTemplate",
-      "inScheme": "https://w3id.org/xapi/connected-learning/v1.0.0",
+      "inScheme": "https://w3id.org/xapi/connected-learning/v1.0",
       "prefLabel": {
         "en": "Restrictions for all connected-learning-defined learning activity statements"
       },
       "rules": [
-        {
-          "location": "$.activity.verb",
-          "presence": "included"
-        },
         {
           "location": "$.platform",
           "presence": "included"
@@ -270,15 +151,15 @@
           "scopeNote": "An Activity object with an 'id' property whose value is the unaltered value of the AU's id attribute from the course structure. MUST be included in the 'grouping' context activities."
         },
         {
-          "location": "$.context.extensions['https://w3id.org/xapi/connected-learning/context/extensions/tag']",
+          "location": "$.context.extensions['https://w3id.org/xapi/connected-learning/extensions/tag']",
           "presence": "included"
         },
         {
-          "location": "$.context.extensions['https://w3id.org/xapi/connected-learning/context/extensions/parent.message']",
+          "location": "$.context.extensions['https://w3id.org/xapi/connected-learning/extensions/parent-message']",
           "presence": "recommended"
         },
         {
-          "location": "$.context.extensions['https://w3id.org/xapi/connected-learning/context/extensions/parent.message.actor']",
+          "location": "$.context.extensions['https://w3id.org/xapi/connected-learning/extensions/parent-message-actor']",
           "presence": "recommended"
         },
         {
@@ -292,11 +173,11 @@
       ]
     },
     {
-      "id": "https://w3id.org/xapi/connected-learning#coursenrolmentrestrictions",
+      "id": "https://w3id.org/xapi/connected-learning/templates#coursenrolmentrestrictions",
       "type": "StatementTemplate",
-      "inScheme": "https://w3id.org/xapi/connected-learning/v1.0.0",
+      "inScheme": "https://w3id.org/xapi/connected-learning/v1.0",
       "prefLabel": {
-        "en": "Restrictions for all connected-learning learner course enrolments and assigned platform to monitor statements"
+        "en": "Restrictions for all connected-learning learner course enrolments and assigned platform to monitor statements."
       },
       "zeroOrMore": "https://w3id.org/xapi/connected-learning#platform",
       "rules": [
@@ -337,12 +218,12 @@
   ],
   "patterns": [
     {
-      "id": "https://w3id.org/xapi/connected-learning#activityverb",
+      "id": "https://w3id.org/xapi/connected-learning/patterns#activityverb",
       "type": "Pattern",
       "prefLabel": {
         "en": "Activity verb on Social networking sites"
       },
-      "inScheme": "https://w3id.org/xapi/connected-learning/v1.0.0",
+      "inScheme": "https://w3id.org/xapi/connected-learning/v1.0",
       "alternates": [
         "https://w3id.org/xapi/connected-learning#shared",
         "https://w3id.org/xapi/connected-learning#liked",
@@ -351,7 +232,7 @@
       ]
     },
     {
-      "id": "https://w3id.org/xapi/cmi5#activityverbs",
+      "id": "https://w3id.org/xapi/connected-learning/patterns#activityverbs",
       "type": "Pattern",
       "prefLabel": {
         "en": "Multiple activity verbs on same statement"
@@ -359,16 +240,16 @@
       "definition": {
         "en": "This pattern provides an option to use zero or more of Activity verb on Social networking sites."
       },
-      "inScheme": "https://w3id.org/xapi/connected-learning/v1.0.0",
+      "inScheme": "https://w3id.org/xapi/connected-learning/v1.0",
       "zeroOrMore": "https://w3id.org/xapi/connected-learning#activityverb"
     },
     {
-      "id": "https://w3id.org/xapi/connected-learning#platform",
+      "id": "https://w3id.org/xapi/connected-learning/patterns#platform",
       "type": "Pattern",
       "prefLabel": {
         "en": "Social Networking Platforms included in connected-learning"
       },
-      "inScheme": "https://w3id.org/xapi/connected-learning/v1.0.0",
+      "inScheme": "https://w3id.org/xapi/connected-learning/v1.0",
       "alternates": [
         "https://w3id.org/xapi/connected-learning#facebook",
         "https://w3id.org/xapi/connected-learning#twitter",
