@@ -1,0 +1,492 @@
+{
+  "@context": "https://w3id.org/xapi/profiles/context",
+  "id": "https://",
+  "type": "Profile",
+  "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+  "prefLabel": {
+  	"en": "Atomic Jolt LMS Profile"
+  },
+  "seeAlso": "",
+  "author": {
+    "type": "Organization",
+    "name":""
+  },
+  "Versions": [],
+  "Concepts": [
+      {
+        "id": "http://atomicapps.com/xapi/extensions/canvas-course-id",
+        "type": "ObjectExtension",
+        "definition": {
+          "en": "Used to identify the canvas course id"
+        },
+        "inScheme": "",
+        "prefLabel": {
+          "en": "canvas-course-id"
+        }
+      },      
+      {
+        "id": "http://atomicapps.com/xapi/extensions/canvas-course-url",
+        "type": "ObjectExtension",
+        "definition": {
+          "en": "Used to identify the canvas url"
+        },
+        "inScheme": "",
+        "prefLabel": {
+          "en": "canvas-course-url"
+        }
+      },
+      {
+        "id": "http://atomicapps.com/xapi/extensions/canvas-page-title",
+        "type": "ObjectExtension",
+        "definition": {
+          "en": "Used to identify the page title"
+        },
+        "inScheme": "",
+        "prefLabel": {
+          "en": "canvas-page-title"
+        }
+      },
+      {
+        "id": "http://atomicapps.com/xapi/extensions/canvas-page-url",
+        "type": "ObjectExtension",
+        "definition": {
+          "en": "Used to identify the canvas page url in a social poll object"
+        },
+        "inScheme": "",
+        "prefLabel": {
+          "en": "canvas-page-url"
+        }
+      },
+      {
+        "id": "http://atomicapps.com/xapi/tools/socialquizzing/extensions/pollId",
+        "type": "ResultExtension",
+        "definition": {
+          "en": "Used to identify the poll id of a social poll in canvas"
+        },
+        "inScheme": "",
+        "prefLabel": {
+          "en": "pollId"
+        }
+      },
+      {
+        "id": "http://atomicapps.com/xapi/tools/socialquizzing/extensions/responses",
+        "type": "ResultExtension",
+        "definition": {
+          "en": "Used as a container for responses in a social poll, requires the additional extensions optionId/reasoning"
+        },
+        "inScheme": "",
+        "prefLabel": {
+          "en": "responses"
+        }
+      },
+      {
+        "id": "http://atomicapps.com/xapi/tools/socialquizzing/extensions/optionId",
+        "type": "ResultExtension",
+        "definition": {
+          "en": "Used to identify the optionId of a response in social poll"
+        },
+        "inScheme": "",
+        "prefLabel": {
+          "en": "optionId"
+        }
+      },
+      {
+        "id": "http://atomicapps.com/xapi/tools/socialquizzing/extensions/reasoning",
+        "type": "ResultExtension",
+        "definition": {
+          "en": "Used to collect the user reasoning for a response in social poll"
+        },
+        "inScheme": "",
+        "prefLabel": {
+          "en": "reasoning"
+        }
+      },
+      {
+        "id": "http://atomicapps.com/xapi/tools/commentbox/extensions/parentReplyId",
+        "type": "ResultExtension",
+        "definition": {
+          "en": "Used to identify the parent comment in a threaded discussion using comments box"
+        },
+        "inScheme": "",
+        "prefLabel": {
+          "en": "parentReplyId"
+        }
+      },
+      {
+        "id": "http://atomicapps.com/xapi/tools/commentbox/extensions/commentsBoxId",
+        "type": "ResultExtension",
+        "definition": {
+          "en": "Used to identify the id of the comments box"
+        },
+        "inScheme": "",
+        "prefLabel": {
+          "en": "commentsBoxId"
+        }
+      },
+      {
+        "id": "http://atomicapps.com/xapi/tools/commentbox/extensions/originalContent",
+        "type": "ResultExtension",
+        "definition": {
+          "en": "Used to identify the old response in a comments box after its been edited"
+        },
+        "inScheme": "",
+        "prefLabel": {
+          "en": "originalContent"
+        }
+      },
+      {
+        "id": "http://atomicapps.com/xapi/tools/commentsbox/verbs#replyReported",
+        "type": "Verb",
+        "definition": {
+          "en": "Verb used for reported replies in comments box"
+        },
+        "inScheme": "",
+        "prefLabel": {
+          "en": "Reported"
+        }
+      }
+  ],
+  "Templates": [
+     {
+        "Id": "http://placeholder.com/xapi/profiles/template#answered",
+        "inScheme": "",
+        "prefLabel": {
+            "En": "Answered"
+        },
+        "Definition": {
+            "En": "Statement and rules associated with answering a question in atomic social poll"
+        },
+        "Verb": "http://adlnet.gov/expapi/verbs/answered",
+        "Rules": [
+            {
+               "Location": "$.id",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.timestamp",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.choices",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-course-id']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-course-url']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-page-title']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-page-url']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.result.extensions['http://atomicapps.com/xapi/tools/socialquizzing/extensions/pollId']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.result.extensions['http://atomicapps.com/xapi/tools/socialquizzing/extensions/responses']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.result.extensions['http://atomicapps.com/xapi/tools/socialquizzing/extensions/optionId']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.result.extensions['http://atomicapps.com/xapi/tools/socialquizzing/extensions/reasoning']",
+               "Presence": "included"
+            }
+        ]
+     },
+     {
+        "Id": "http://placeholder.com/xapi/profiles/template#updated",
+        "inScheme": "",
+        "prefLabel": {
+            "En": "Updated"
+        },
+        "Definition": {
+            "En": "Statement and rules associated with updating a question answer in atomic social poll"
+        },
+        "Verb": "https://activitystre.ms/schema/1.0/update",
+        "Rules": [
+                       {
+               "Location": "$.id",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.timestamp",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.choices",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-course-id']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-course-url']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-page-title']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-page-url']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.result.extensions['http://atomicapps.com/xapi/tools/socialquizzing/extensions/pollId']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.result.extensions['http://atomicapps.com/xapi/tools/socialquizzing/extensions/responses']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.result.extensions['http://atomicapps.com/xapi/tools/socialquizzing/extensions/optionId']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.result.extensions['http://atomicapps.com/xapi/tools/socialquizzing/extensions/reasoning']",
+               "Presence": "included"
+            }
+        ]
+
+
+     },
+     {
+        "Id": "http://placeholder.com/xapi/profiles/template#completed",
+        "inScheme": "",
+        "prefLabel": {
+            "En": "Completed"
+        },
+        "Definition": {
+            "En": "Statement and rules associated with a social poll being completed"
+        },
+        "Verb": "http://adlnet.gov/expapi/verbs/completed",
+        "Rules": [
+                       {
+               "Location": "$.id",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.timestamp",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.choices",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-course-id']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-course-url']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-page-title']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-page-url']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.result.extensions['http://atomicapps.com/xapi/tools/socialquizzing/extensions/pollId']",
+               "Presence": "included"
+            }
+
+
+     },
+     {
+        "Id": "http://placeholder.com/xapi/profiles/template#replied",
+        "inScheme": "",
+        "prefLabel": {
+            "En": "Replied"
+        },
+        "Definition": {
+            "En": "Statement and rules associated a reply made using comments box"
+        },
+        "Verb": "http://id.tincanapi.com/verb/replied",
+        "Rules": [
+                       {
+               "Location": "$.id",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.timestamp",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.choices",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-course-id']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-course-url']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-page-title']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-page-url']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.result.extensions['http://atomicapps.com/xapi/tools/commentsbox/extensions/parentReplyId']",
+               "Presence": "recommended"
+            },
+            {
+               "Location": "$.result.extensions['http://atomicapps.com/xapi/tools/commentsbox/extensions/commentsBoxId']",
+               "Presence": "included"
+            },
+
+
+     },
+     {
+        "Id": "http://placeholder.com/xapi/profiles/template#liked",
+        "inScheme": "",
+        "prefLabel": {
+            "En": "Liked"
+        },
+        "Definition": {
+            "En": "Statement and rules associated with liking a reply made with comments box"
+        },
+        "Verb": "https://w3id.org/xapi/acrossx/verbs/liked",
+        "Rules": [
+                       {
+               "Location": "$.id",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.timestamp",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-course-id']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-course-url']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-page-title']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-page-url']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/tools/commentsbox/extensions/commentsBoxId']",
+               "Presence": "included"
+            },
+
+
+     },
+     {
+        "Id": "http://placeholder.com/xapi/profiles/template#edited",
+        "inScheme": "",
+        "prefLabel": {
+            "En": "Edited"
+        },
+        "Definition": {
+            "En": "Statement and rules associated with editing a reply made with comments box
+        },
+        "Verb": "https://w3id.org/xapi/acrossx/verbs/edited",
+        "Rules": [
+                       {
+               "Location": "$.id",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.timestamp",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-course-id']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-course-url']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-page-title']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-page-url']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/tools/commentsbox/extensions/commentsBoxId']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.result.extensions['http://atomicapps.com/xapi/tools/commentsbox/extensions/originalContent']",
+               "Presence": "included"
+            },
+     },
+     {
+        "Id": "http://placeholder.com/xapi/profiles/template#reported",
+        "inScheme": "",
+        "prefLabel": {
+            "En": "Reported"
+        },
+        "Definition": {
+            "En": "Statement and rules associated with editing a reply made with comments box
+        },
+        "Verb": "http://atomicapps.com/xapi/tools/commentsbox/verbs#replyReported",
+        "Rules": [
+                       {
+               "Location": "$.id",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.timestamp",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-course-id']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-course-url']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-page-title']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/extensions/canvas-page-url']",
+               "Presence": "included"
+            },
+            {
+               "Location": "$.object.extensions['http://atomicapps.com/xapi/tools/commentsbox/extensions/commentsBoxId']",
+               "Presence": "included"
+            },
+     },
+  ],
+  “Patterns”: [
+  
+  ]
+}
